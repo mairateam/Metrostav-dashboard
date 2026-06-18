@@ -1,5 +1,8 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+# Lokální env s credentials — nikdy do gitu
+.env.local
+
 # dependencies
 /node_modules
 /.pnp
