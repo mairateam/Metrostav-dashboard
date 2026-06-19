@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 
-export const revalidate = 3600;
+export const revalidate = 900;
 
 // Publikované ID Sheetu (část za /e/ v pub URL)
 const PUBLISHED_ID = process.env.GOOGLE_PUBLISHED_ID!;

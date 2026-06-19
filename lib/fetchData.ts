@@ -46,7 +46,7 @@ function rowsToObjects(rows: string[][]): Record<string, string>[] {
 
 async function fetchSheet(gid: string) {
   if (!gid) return [];
-  const res = await fetch(csvUrl(gid), { next: { revalidate: 3600 } });
+  const res = await fetch(csvUrl(gid), { next: { revalidate: 900 } });
   if (!res.ok) throw new Error(`CSV fetch selhal pro GID ${gid}: ${res.status}`);
   const text = await res.text();
   return rowsToObjects(parseCsv(text));
